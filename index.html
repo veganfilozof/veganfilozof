@@ -17,77 +17,263 @@
             color: #222;
         }
 
+        /* ÜST MENÜ */
+
         header {
-            padding: 70px 24px 50px;
-            text-align: center;
             background: white;
             border-bottom: 1px solid #e5e5e5;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 48px;
-            letter-spacing: -1px;
+        .nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 72px;
+            padding: 0 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
         }
 
-        header p {
-            margin: 16px auto 0;
-            max-width: 600px;
-            color: #666;
-            font-size: 18px;
-            line-height: 1.6;
+        .logo {
+            margin: 0;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
         }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: #315c3b;
+        }
+
+        nav a.active {
+            color: #315c3b;
+            font-weight: 600;
+        }
+
+        /* ANA ALAN */
 
         main {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 50px 24px 80px;
+            padding: 48px 28px 70px;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        /* KARBON KARTLARI */
 
-        .projects {
+        .carbon-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
         }
 
-        .project {
-            display: block;
-            padding: 28px;
+        .carbon-card {
+            min-height: 190px;
+            padding: 30px;
             background: white;
-            border: 1px solid #e5e5e5;
-            border-radius: 16px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e3e3df;
+            border-radius: 14px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        .project:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        .carbon-card h2 {
+            margin: 0 0 12px;
+            font-size: 24px;
+            letter-spacing: -0.4px;
         }
 
-        .project h3 {
-            margin: 0 0 10px;
-            font-size: 22px;
-        }
-
-        .project p {
-            margin: 0;
+        .carbon-card p {
+            margin: 0 0 24px;
+            max-width: 520px;
             color: #666;
             line-height: 1.6;
         }
 
+        .status {
+            margin-top: auto;
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 9px;
+            background: #eeeeeb;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* SON EKLENENLER */
+
+        .latest {
+            margin-top: 50px;
+            padding-top: 34px;
+            border-top: 1px solid #dfdfdb;
+        }
+
+        .latest-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .latest-header h2 {
+            margin: 0;
+            font-size: 27px;
+            letter-spacing: -0.4px;
+        }
+
+        .all-link {
+            color: #315c3b;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .latest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .article-card {
+            min-width: 0;
+            min-height: 210px;
+            padding: 22px;
+            background: white;
+            border: 1px solid #e3e3df;
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .category {
+            color: #315c3b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .article-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .article-card p {
+            margin: 0;
+            color: #666;
+            line-height: 1.55;
+            font-size: 14px;
+        }
+
+        .read {
+            margin-top: auto;
+            padding-top: 20px;
+            color: #315c3b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
         footer {
-            padding: 30px 24px;
+            padding: 28px 24px;
             text-align: center;
             color: #888;
-            font-size: 14px;
+            font-size: 13px;
             border-top: 1px solid #e5e5e5;
+            background: #f7f7f5;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            nav {
+                width: 100%;
+                gap: 20px;
+                overflow-x: auto;
+                padding-bottom: 4px;
+            }
+
+            .latest-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* TELEFON */
+
+        @media (max-width: 650px) {
+            main {
+                padding: 28px 18px 50px;
+            }
+
+            .carbon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carbon-card {
+                min-height: 170px;
+                padding: 24px;
+            }
+
+            .carbon-card h2 {
+                font-size: 21px;
+            }
+
+            .latest {
+                margin-top: 36px;
+            }
+
+            .latest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-card {
+                min-height: 190px;
+            }
         }
     </style>
 </head>
@@ -95,33 +281,111 @@
 <body>
 
 <header>
-    <h1>Vegan Filozof</h1>
-    <p>
-        Ürettiğim uygulamalar, projeler ve fikirler için kişisel proje alanım.
-    </p>
+    <div class="nav">
+        <div class="logo">Vegan Filozof</div>
+
+        <nav>
+            <a class="active" href="/">Ana Sayfa</a>
+            <a href="#">Karbon Ayak İzi</a>
+            <a href="#">Rotanın Ayak İzleri</a>
+            <a href="#">Vegan Yaşam</a>
+            <a href="#">Hobiler</a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Projeler</h2>
 
-    <div class="projects">
+    <section class="carbon-grid">
 
-        <a class="project" href="/telsizlog.html">
-            <h3>📻 TelsizLog</h3>
+        <div class="carbon-card">
+            <h2>Bireysel Karbon Ayak İzi</h2>
             <p>
-                Telsiz konuşmalarını saat bilgisiyle kaydetmek,
-                metne dönüştürmek ve görev kayıtlarını düzenlemek için geliştirilen uygulama.
+                Bireysel karbon ayak izi hesaplama ve takip alanı.
             </p>
-        </a>
+            <span class="status">Yakında</span>
+        </div>
 
-        <a class="project" href="#">
-            <h3>👥 AnotherHR</h3>
+        <div class="carbon-card">
+            <h2>Kurumsal Karbon Ayak İzi</h2>
             <p>
-                Dijital insan kaynakları süreçleri için geliştirilen proje.
+                Kurumsal sera gazı hesaplama alanı.
             </p>
-        </a>
+            <span class="status">Yakında</span>
+        </div>
 
-    </div>
+    </section>
+
+
+    <section class="latest">
+
+        <div class="latest-header">
+            <h2>Son Eklenenler</h2>
+            <a class="all-link" href="#">Tümünü gör →</a>
+        </div>
+
+        <div class="latest-grid">
+
+            <a class="article-card" href="#">
+                <div class="article-meta">
+                    <span class="category">Vegan Yaşam</span>
+                    <span>•</span>
+                    <span>Yakında</span>
+                </div>
+
+                <h3>Evde Komposta Başlamak</h3>
+
+                <p>
+                    Evde kompost kullanımıyla ilgili notlar.
+                </p>
+
+                <span class="read">Oku →</span>
+            </a>
+
+
+            <a class="article-card" href="#">
+                <div class="article-meta">
+                    <span class="category">Rotanın Ayak İzleri</span>
+                    <span>•</span>
+                    <span>Yakında</span>
+                </div>
+
+                <h3>Rota Notları</h3>
+
+                <p>
+                    Rotalar, görülecek yerler, kamp ve vegan seçeneklerle ilgili notlar.
+                </p>
+
+                <span class="read">Oku →</span>
+            </a>
+
+
+            <!--
+                ÖNEMLİ:
+                Bu bağlantı App Store için kullanılan mevcut
+                /telsizlog.html adresine gitmeye devam ediyor.
+            -->
+
+            <a class="article-card" href="/telsizlog.html">
+                <div class="article-meta">
+                    <span class="category">Hobiler</span>
+                    <span>•</span>
+                    <span>Uygulama</span>
+                </div>
+
+                <h3>TelsizLog</h3>
+
+                <p>
+                    Telsiz konuşmalarını zaman damgalı metin kayıtlarına dönüştüren hobi projesi.
+                </p>
+
+                <span class="read">İncele →</span>
+            </a>
+
+        </div>
+
+    </section>
+
 </main>
 
 <footer>
