@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Filozof</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f7f7f5;
+            color: #222;
+        }
+
+        header {
+            padding: 70px 24px 50px;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            margin: 16px auto 0;
+            max-width: 600px;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 24px 80px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            display: block;
+            padding: 28px;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .project p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 30px 24px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid #e5e5e5;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Vegan Filozof</h1>
+    <p>
+        Ürettiğim uygulamalar, projeler ve fikirler için kişisel proje alanım.
+    </p>
+</header>
+
+<main>
+    <h2>Projeler</h2>
+
+    <div class="projects">
+
+        <a class="project" href="/telsizlog/">
+            <h3>📻 TelsizLog</h3>
+            <p>
+                Telsiz konuşmalarını saat bilgisiyle kaydetmek,
+                metne dönüştürmek ve görev kayıtlarını düzenlemek için geliştirilen uygulama.
+            </p>
+        </a>
+
+        <a class="project" href="#">
+            <h3>👥 AnotherHR</h3>
+            <p>
+                Dijital insan kaynakları süreçleri için geliştirilen proje.
+            </p>
+        </a>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Vegan Filozof
+</footer>
+
+</body>
+</html>
