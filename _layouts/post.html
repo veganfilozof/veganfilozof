@@ -1,12 +1,10 @@
----
----
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegan Filozof</title>
+
+    <title>{{ page.title }} | Vegan Filozof</title>
 
     <style>
         * {
@@ -51,7 +49,6 @@
 
         .tagline {
             font-size: 11px;
-            font-weight: 400;
             color: #999;
             white-space: nowrap;
         }
@@ -67,13 +64,8 @@
             font-size: 14px;
         }
 
-        nav a:hover,
-        nav a.active {
+        nav a:hover {
             color: #315c3b;
-        }
-
-        nav a.active {
-            font-weight: 600;
         }
 
         main {
@@ -269,7 +261,7 @@
         </div>
 
         <nav>
-            <a class="active" href="/">Ana Sayfa</a>
+            <a href="/">Ana Sayfa</a>
             <a href="/yazilar.html">Yazılar</a>
             <a href="/hobiler.html">Hobiler</a>
         </nav>
@@ -281,48 +273,41 @@
 
     <div class="page-layout">
 
-        {% assign latest_post = site.posts.first %}
-
         <article class="main-article">
 
-            {% if latest_post %}
+            <h1>{{ page.title }}</h1>
 
-                <h1>{{ latest_post.title }}</h1>
+            <div class="article-content">
+                {{ content }}
+            </div>
 
-                <div class="article-content">
-                    {{ latest_post.content }}
-                </div>
-
-                <div class="article-date">
-                    {{ latest_post.date | date: "%d.%m.%Y" }}
-                </div>
-
-            {% else %}
-
-                <h1>İlk yazı için hazır.</h1>
-
-            {% endif %}
+            <div class="article-date">
+                {{ page.date | date: "%d.%m.%Y" }}
+            </div>
 
         </article>
 
-
         <aside class="side-posts">
 
-            {% for post in site.posts offset: 1 limit: 5 %}
+            {% for post in site.posts limit: 5 %}
 
-                <a class="side-post" href="{{ post.url }}">
+                {% if post.url != page.url %}
 
-                    {% if post.image %}
-                        <img src="{{ post.image }}" alt="{{ post.title }}">
-                    {% endif %}
+                    <a class="side-post" href="{{ post.url }}">
 
-                    <h2>{{ post.title }}</h2>
+                        {% if post.image %}
+                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                        {% endif %}
 
-                    <time>
-                        {{ post.date | date: "%d.%m.%Y" }}
-                    </time>
+                        <h2>{{ post.title }}</h2>
 
-                </a>
+                        <time>
+                            {{ post.date | date: "%d.%m.%Y" }}
+                        </time>
+
+                    </a>
+
+                {% endif %}
 
             {% endfor %}
 
